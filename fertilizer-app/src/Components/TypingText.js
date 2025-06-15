@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const TypingText = ({ text, speed = 100, cursorBlinkSpeed = 500 }) => {
+const TypingText = ({ text, speed = 500, cursorBlinkSpeed = 500 }) => {
     const [displayedText, setDisplayedText] = useState('');
     const [index, setIndex] = useState(0);
     const [isCursorVisible, setIsCursorVisible] = useState(true);
@@ -23,7 +23,7 @@ const TypingText = ({ text, speed = 100, cursorBlinkSpeed = 500 }) => {
   }, [cursorBlinkSpeed]);
 
   return (
-    <div style={{ fontFamily: 'lato', whiteSpace: 'pre', fontSize:50, textAlign: 'center' }}>
+    <div style={{ fontFamily: 'Brush Script MT', whiteSpace: 'pre', fontSize:50, textAlign: 'center' }}>
       {displayedText}
       {isCursorVisible && <span className="cursor">|</span>}
     </div>
