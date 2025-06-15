@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.responsive-text h1 {
+  font-size: 2rem;
+}
+
+.responsive-text p {
+  font-size: 1rem;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .responsive-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .responsive-text p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .responsive-text h1 {
+    font-size: 3rem;
+  }
+
+  .responsive-text p {
+    font-size: 1.5rem;
+  }
+}
+
+.clamp-text {
+  font-size: clamp(1rem, 4vw, 3rem); /* Minimum: 1rem, Preferred: 4vw, Maximum: 3rem */
+}
