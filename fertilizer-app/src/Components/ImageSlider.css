@@ -1,48 +1,105 @@
-/* src/Carousel.css */
+/* Styles for the carousel container */
 .carousel {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    align-content: center;
-    padding: 40px 40px;
-    
-  }
-  .carousel__btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 1.5rem;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    z-index: 1;
-    transition: background-color 0.3s;
-  }
-  .carousel__btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  .carousel__btn--prev {
-    left: 0;
-  }
-  .carousel__btn--next {
-    right: 0;
-  }
+  position: relative; 
+  max-width: 100%; 
+  overflow: hidden; 
+  align-content: center; 
+  padding: 40px 40px; 
+}
+
+/* Styles for navigation buttons */
+.carousel__btn {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white; 
+  font-size: 1.5rem; 
+  border: none; 
+  padding: 1rem; /* Padding inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  z-index: 1; /* Ensures buttons are above other content */
+  transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+.carousel__btn:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background color on hover */
+}
+
+.carousel__btn--prev {
+  left: 0; 
+}
+
+.carousel__btn--next {
+  right: 0;
+}
+
+/* Styles for images within the carousel */
+.carousel__img {
+  width: 1440px; 
+  height: 500px; 
+  display: block;
+  /* transition: transform 0.3s ease-in-out; */
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out; 
+  /* transition: opacity 1s ease-in-out, transform 1s ease-in-out; */
+  border-radius: 20px; 
+}
+
+.carousel__img:hover {
+  transform: scale(1.05); 
+}
+
+/* Styles for the slide container */
+.carousel_slide {
+  display: flex; 
+  transition: opacity 1s ease-in-out; 
+  position: relative; 
+}
+
+
+.image.fade-in {
+  opacity: 1; 
+  transform: scale(1); 
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
   .carousel__img {
-    width: 1440px;
-    height: 500px;
-    display: absolute;
-    transition: transform 0.3s ease-in-out;
-    /* transition: opacity 1s ease-in-out, transform 1s ease-in-out; */
-    border-radius: 20px;
-    
+    width: 100%;
+    height: auto;
   }
-  .carousel__img:hover {
-    transform: scale(1.05);
+
+  .carousel__btn {
+    font-size: 1.2rem;
+    padding: 0.8rem;
   }
-  .carousel_slide {
-    display: flex;
-    transition: opacity 1s ease-in-out;
-    position: relative;
+}
+
+@media (max-width: 768px) {
+  .carousel__btn {
+    font-size: 1rem;
+    padding: 0.6rem;
   }
+
+  .carousel {
+    padding: 20px 10px;
+  }
+
+  .carousel__img {
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel__btn {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .carousel__img {
+    border-radius: 10px;
+  }
+}
+
+
+

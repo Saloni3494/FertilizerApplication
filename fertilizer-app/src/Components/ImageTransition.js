@@ -26,6 +26,10 @@ const ImageTransition = () => {
         alt="First"
         className="image"
       />
+      <div className="image-caption">
+        <h1>Welcome to Our Gallery</h1>
+        <p>Explore the beauty of our curated collection</p>
+      </div>
     </div>
   );
 };

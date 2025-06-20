@@ -26,6 +26,13 @@ code {
     font-size: 2.5rem;
   }
 
+  .image-transition-container {
+    flex-direction: column;
+  }
+  .carousel_slide {
+    flex-direction: column;
+  }
+
   .responsive-text p {
     font-size: 1.25rem;
   }
