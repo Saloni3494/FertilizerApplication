@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./ImageTransition.css";
+import "../Styles/ImageTransition.css";
 
 const ImageTransition = () => {
   const imageRef = useRef(null);

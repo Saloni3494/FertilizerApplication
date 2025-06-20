@@ -5,6 +5,7 @@
   overflow: hidden; 
   align-content: center; 
   padding: 40px 40px; 
+  float: left;
 }
 
 /* Styles for navigation buttons */
@@ -100,6 +101,7 @@
     border-radius: 10px;
   }
 }
+
 
 
 
